@@ -1,7 +1,11 @@
 ##Kuvallinen ohje löytyy osoitteesta: https://selvinen.wordpress.com/2016/11/08/palvelinten-hallinta-viides-linux-tehtava-h5/
+
+##Tehtävä
 “h5. Tee moduli git-varastoon ja kirjoita raportti sinne MarkDownilla.”
 
 http://terokarvinen.com/2016/aikataulu-palvelinten-hallinta-ict4tn022-1-5-op-uusi-ops-loppusyksy-2016
+
+##Valmistelut
 
 Tehtävä on tehty Ubuntu 16.04.1 LTS versiolla.
 
@@ -93,7 +97,7 @@ final
 Koodin sisältö:
 koodi
 
-Bonus
+##Bonus
 
 Jatkoin samantien ja käynnistin koneen uudestaan. Kuten aina ennenkin ajoin komennot:
 
