@@ -1,7 +1,7 @@
 ##Kuvallinen ohje löytyy osoitteesta: https://selvinen.wordpress.com/2016/11/08/palvelinten-hallinta-viides-linux-tehtava-h5/
 
 ##Tehtävä
-“h5. Tee moduli git-varastoon ja kirjoita raportti sinne MarkDownilla.”
+“h5. Tee moduli git-varastoon ja kirjoita raportti sinne MarkDownilla.Bonustehtävänä voit kokeilla kloonata uusi modulisi vasta bootatulle live-USB:lle.”
 
 http://terokarvinen.com/2016/aikataulu-palvelinten-hallinta-ict4tn022-1-5-op-uusi-ops-loppusyksy-2016
 
@@ -17,9 +17,11 @@ sudo apt-get update
 
 Tehtävää jatkettu siitä mihin tässä: https://selvinen.wordpress.com/2016/11/04/palvelinten-hallinta-neljas-linux-tehtava-h4/ jäätiin.
 
-Aloitin ajamalla aikaisemmista tehtävistä tutun asennus - modulini. Tein tämän sen takia, että testasin koodin, jotta se olisi toimiva, jonka laitan githubiin.
+Aloitin ajamalla aikaisemmista tehtävistä tutun asennus - modulini. Tein tämän sen takia, että testasin koodin, jotta se olisi toimiva githubia varten. Moduli toimi ongelmitta ja siirryin itse tehtävään.
 
-Moduli toimi ongelmitta ja siirryin itse tehtävään ja latasin gitin komennolla:
+Git
+
+Latasin gitin komennolla:
 
 sudo apt-get install git
 
@@ -97,7 +99,7 @@ final
 Koodin sisältö:
 koodi
 
-##Bonus
+Bonus
 
 Jatkoin samantien ja käynnistin koneen uudestaan. Kuten aina ennenkin ajoin komennot:
 
@@ -132,8 +134,8 @@ Loin oikeat tiedosto polut:
 /etc/puppet/modules/asennus/manifests
 /home/xubuntu/public_html
 
-Siirsin moduuli koodini oikeaan kansioon ja nimesin sen samalla init.ppksi:
-
+Siirsin moduuli koodin oikeaan kansioon ja nimesin sen samalla init.ppksi:
+xubuntu@xubuntu:~/Code/testi/linux$ sudo cp koodi /etc/puppet/modules/asennus/manifests/
 xubuntu@xubuntu:/etc/puppet/modules/asennus/manifests$ sudo mv koodi init.pp
 
 Tarkistin myös, että koodi näyttää oikealta ja on se minkä laitoin githubiin:
@@ -176,7 +178,6 @@ enable => "true",
 }
 }
 
-
 Ajoin komennon sudo puppet apply -e 'class{asennus:}' :kaksi kertaa ja sain:
 Notice: Compiled catalog for xubuntu.elisa-laajakaista.fi in environment production in 0.33 seconds
 Notice: /Stage[main]/Asennus/Package[rawtherapee]/ensure: ensure changed 'purged' to 'present'
@@ -216,7 +217,6 @@ Ajattelin, että olisi hyvä muuttaa koodi tiedonston nimi, joten tein sen:
 xubuntu@xubuntu:~/Code/testi/linux$ mv koodi init.pp
 
 Tämän jälkeen päivitin tiedot githubiin:
-
 
 git add .
 git commit
