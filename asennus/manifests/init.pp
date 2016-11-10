@@ -14,7 +14,8 @@ class asennus{
 	}
 
 	file{"/home/xubuntu/public_html/index.html":
-		content => "Hello User!\n",
+		content => template("asennus/asennus.erb")
+
 	}
 
 	file{"/etc/apache2/mods-enabled/userdir.conf":
